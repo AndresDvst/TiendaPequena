@@ -1,5 +1,7 @@
 package Productos;
 
+import Pago.MetodoPago;
+
 import java.util.Scanner;
 
 public class Shorts {
@@ -12,7 +14,6 @@ public class Shorts {
         //Precios
         int precioShortNiños = 10;
         int precioShortAdultos = 20;
-        int preciofinal = 0;
 
         //Mostrar tallas
         System.out.println("Usted eligió Short");
@@ -42,8 +43,8 @@ public class Shorts {
                         prendaShort.nextLine();
 
                         if (cantidadprenda >= 1) {
-                            preciofinal = cantidadprenda * precioShortNiños;
-                            System.out.println("El total a pagar sería: " + preciofinal + " USD");
+                            MetodoPago.precioFinal = cantidadprenda * precioShortNiños;
+                            System.out.println("El total a pagar sería: " + MetodoPago.precioFinal + " USD");
                             tallaShortValida = true;
                             cantidadshortwhile = true;
                         } else {
@@ -73,8 +74,8 @@ public class Shorts {
                         prendaShort.nextLine();
 
                         if (cantidadprenda >= 1) {
-                            preciofinal = cantidadprenda * precioShortAdultos;
-                            System.out.println("El total a pagar sería: " + preciofinal + " USD");
+                            MetodoPago.precioFinal = cantidadprenda * precioShortAdultos;
+                            System.out.println("El total a pagar sería: " + MetodoPago.precioFinal + " USD");
                             tallaShortValida = true;
                             cantidadshortwhile = true;
                         } else {

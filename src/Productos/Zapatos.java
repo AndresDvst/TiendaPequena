@@ -1,5 +1,7 @@
 package Productos;
 
+import Pago.MetodoPago;
+
 import java.util.Scanner;
 
 public class Zapatos {
@@ -13,7 +15,6 @@ public class Zapatos {
         //Precios
         int precioZapatosNiños = 100;
         int precioZapatosAdultos = 120;
-        int preciofinal = 0;
 
         //Mostrar tallas
         System.out.println("Usted eligio Productos.Productos.Zapatos");
@@ -42,8 +43,8 @@ public class Zapatos {
                         prendazapatos.nextLine();
 
                         if (cantidadprenda >= 1){
-                            preciofinal = cantidadprenda * precioZapatosNiños;
-                            System.out.println("El total a pagar seria: " + preciofinal + " USD");
+                            MetodoPago.precioFinal = cantidadprenda * precioZapatosNiños;
+                            System.out.println("El total a pagar seria: " + MetodoPago.precioFinal + " USD");
                             tallaZapatosValida = true;
                             cantidadZapatoswhile = true;
                         } else {
@@ -72,8 +73,8 @@ public class Zapatos {
                         prendazapatos.nextLine();
 
                         if (cantidadprenda >= 1){
-                            preciofinal = cantidadprenda * precioZapatosAdultos;
-                            System.out.println("El total a pagar seria: " + preciofinal + " USD");
+                            MetodoPago.precioFinal = cantidadprenda * precioZapatosAdultos;
+                            System.out.println("El total a pagar seria: " + MetodoPago.precioFinal + " USD");
                             tallaZapatosValida = true;
                             cantidadZapatoswhile = true;
                         } else {

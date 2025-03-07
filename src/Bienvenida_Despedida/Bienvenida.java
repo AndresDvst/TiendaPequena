@@ -1,3 +1,5 @@
+package Bienvenida_Despedida;
+
 import java.util.Scanner;
 
 public class Bienvenida {

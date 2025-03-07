@@ -1,5 +1,7 @@
 package Productos;
 
+import Pago.MetodoPago;
+
 import java.util.Scanner;
 
 public class Pantalones {
@@ -13,7 +15,6 @@ public class Pantalones {
         //Precios
         int precioPantalonNiños = 30;
         int precioPantalonAdultos = 60;
-        int preciofinal = 0;
 
         //Mostrar tallas
         System.out.println("Usted eligio Pantalon");
@@ -42,8 +43,8 @@ public class Pantalones {
                         prendapantalon.nextLine();
 
                         if (cantidadprenda >= 1){
-                            preciofinal = cantidadprenda * precioPantalonNiños;
-                            System.out.println("El total a pagar seria: " + preciofinal + " USD");
+                            MetodoPago.precioFinal = cantidadprenda * precioPantalonNiños;
+                            System.out.println("El total a pagar seria: " + MetodoPago.precioFinal + " USD");
                             tallaPantalonValida = true;
                             cantidadpantalonwhile = true;
                         } else {
@@ -72,8 +73,8 @@ public class Pantalones {
                         prendapantalon.nextLine();
 
                         if (cantidadprenda >= 1){
-                            preciofinal = cantidadprenda * precioPantalonAdultos;
-                            System.out.println("El total a pagar seria: " + preciofinal + " USD");
+                            MetodoPago.precioFinal = cantidadprenda * precioPantalonAdultos;
+                            System.out.println("El total a pagar seria: " + MetodoPago.precioFinal + " USD");
                             tallaPantalonValida = true;
                             cantidadpantalonwhile = true;
                         } else {

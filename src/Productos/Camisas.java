@@ -1,5 +1,7 @@
 package Productos;
 
+import Pago.MetodoPago;
+
 import java.util.Scanner;
 
 public class Camisas {
@@ -13,7 +15,6 @@ public class Camisas {
         //Precios
         int precioCamisaNiños = 15;
         int precioCamisaAdultos = 30;
-        int preciofinal = 0;
 
         //Mostrar tallas
         System.out.println("Usted eligio Camisa");
@@ -42,8 +43,8 @@ public class Camisas {
                         prendaCamisa.nextLine();
 
                         if (cantidadprenda >= 1){
-                            preciofinal = cantidadprenda * precioCamisaNiños;
-                            System.out.println("El total a pagar seria: " + preciofinal + " USD");
+                            MetodoPago.precioFinal = cantidadprenda * precioCamisaNiños;
+                            System.out.println("El total a pagar seria: " + MetodoPago.precioFinal + " USD");
                             tallancamisavalida = true;
                             cantidacamisaswhile = true;
                         } else {
@@ -72,8 +73,8 @@ public class Camisas {
                         prendaCamisa.nextLine();
 
                         if (cantidadprenda >= 1){
-                            preciofinal = cantidadprenda * precioCamisaAdultos;
-                            System.out.println("El total a pagar seria: " + preciofinal + " USD");
+                            MetodoPago.precioFinal = cantidadprenda * precioCamisaAdultos;
+                            System.out.println("El total a pagar seria: " + MetodoPago.precioFinal + " USD");
                             tallancamisavalida = true;
                             cantidacamisaswhile = true;
                         } else {
