@@ -1,9 +1,8 @@
-import Bienvenida_Despedida.Bienvenida;
-import Colores.Colores;
-import Productos.Productos;
-import Pago.MetodoPago;
+package Main;
 
-import java.awt.*;
+import Bienvenida_Despedida.Bienvenida;
+import Bienvenida_Despedida.Despedida;
+import Productos.Productos;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -26,7 +25,7 @@ public class Main {
             Productos.mostrarProductos(nombrevalido);
 
             //Despedida
-
+            Despedida.despedida();
 
         }
 

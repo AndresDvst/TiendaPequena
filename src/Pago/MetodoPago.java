@@ -43,7 +43,12 @@ public class MetodoPago {
 
                 //Efectivo
                 } else if (elegirMetodoDescuento.equalsIgnoreCase("Efectivo") || elegirMetodoDescuento.equalsIgnoreCase("2")) {
-                    Metodo_Efectivo.metodoEfectivo();
+                    Metodo_Efectivo.MetodoEfectivo();
+                    metodoValido = true;
+
+                //Tranferencia
+                } else if (elegirMetodoDescuento.equalsIgnoreCase("3") || elegirMetodoDescuento.equalsIgnoreCase("Tranferencia")) {
+                    Metodo_Transferencia.metodoTrans();
                     metodoValido = true;
                 }
             }
@@ -53,6 +58,33 @@ public class MetodoPago {
         || color.equalsIgnoreCase("6") || color.equalsIgnoreCase("Blanco")) {
 
             System.out.println("Para pagar un total de: " + precioFinal + " USD");
+
+            //Elegir Metodo
+            Boolean metodoValido = false;
+
+            while (!metodoValido){
+
+                //Elegir
+                String elegirMetodoDescuento = elegirMetodo.nextLine();
+
+                //Flujo segun caso
+
+                //Tarjeta
+                if (elegirMetodoDescuento.equalsIgnoreCase("Tarjeta") || elegirMetodoDescuento.equalsIgnoreCase("1")){
+                    Metodo_Tarejta.meotodoTarjeta();
+                    metodoValido = true;
+
+                    //Efectivo
+                } else if (elegirMetodoDescuento.equalsIgnoreCase("Efectivo") || elegirMetodoDescuento.equalsIgnoreCase("2")) {
+                    Metodo_EfectivoSinDescuento.MetodoEfectivo();
+                    metodoValido = true;
+
+                    //Tranferencia
+                } else if (elegirMetodoDescuento.equalsIgnoreCase("3") || elegirMetodoDescuento.equalsIgnoreCase("Tranferencia")) {
+                    Metodo_Transferencia.metodoTrans();
+                    metodoValido = true;
+                }
+            }
 
         }
     }

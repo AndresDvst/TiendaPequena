@@ -66,6 +66,7 @@ public class Metodo_Tarejta {
                                         confirmacionTipotarjeta = true;
                                         tipoDeTarjeta = true;
                                         operacion = true;
+                                        MetodoTarjeta.close();
 
                                     //Clave incorrecta
                                     } else {
@@ -124,6 +125,7 @@ public class Metodo_Tarejta {
                                         confirmacionTipotarjeta = true;
                                         tipoDeTarjeta = true;
                                         operacion = true;
+                                        MetodoTarjeta.close();
 
                                         //Clave incorrecta
                                     } else {
@@ -182,6 +184,8 @@ public class Metodo_Tarejta {
                                         confirmacionTipotarjeta = true;
                                         tipoDeTarjeta = true;
                                         operacion = true;
+                                        MetodoTarjeta.close();
+
 
                                         //Clave incorrecta
                                     } else {
